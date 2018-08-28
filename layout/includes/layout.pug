@@ -6,7 +6,9 @@ html(lang=config.language)
   head
     meta(charset='UTF-8')
     title= pageTitle
-    link(rel='stylesheet', href='css/normalize.css')
+    link(rel='stylesheet', href='/css/normalize.css')
+    if theme.highlight_prettify.enable
+      link(rel='stylesheet', href='/css/highlight/prettify-theme/prettify.css')
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       each url in theme.stylesheets
         link(rel='stylesheet', href=url)

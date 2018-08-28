@@ -15,6 +15,9 @@ email:
 
 favicon: /favicon.ico
 
+highlight_prettify:
+  enable: true
+  theme: tomorrow-night-blue
 
 # stylesheets loaded in the <head>
 stylesheets:

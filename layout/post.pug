@@ -9,3 +9,11 @@ block content
       div.post-date
         time(datetime=page.date.toJSON())=date(page.date, date_format)
   .post-content!= page.content
+  if theme.highlight_prettify.enable
+      script(src='/js/jquery-2.2.4.min.js')
+      script(src='/js/prettify.js')
+      script.
+          $(window).load(function () {
+              $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+              prettyPrint();
+          });
